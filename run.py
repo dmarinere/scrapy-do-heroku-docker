@@ -9,7 +9,8 @@
 from twisted.scripts.twistd import _SomeApplicationRunner, ServerOptions
 from twisted.application import app
 from scrapy_do.app import ScrapyDoServiceMaker
-
+import os
+port = int(os.environ.get(“PORT”, 7654))
 
 class ScrapyDoRunnerOptions(ServerOptions):
     @property
